@@ -1,0 +1,8 @@
+pandas
+requests
+matplotlib
+seaborn
+torch
+Pillow
+transformers
+openfoodfacts
