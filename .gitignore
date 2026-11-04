@@ -7,3 +7,11 @@ __pycache__/
 # Virtual environment
 .venv/
 
+
+# Dados pesados: não vão para o Git (o recorte data/processed/ vai)
+data/raw/
+data/images/
+*.csv.gz
+*.part
+.ipynb_checkpoints/
+.pytest_cache/

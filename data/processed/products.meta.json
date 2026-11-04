@@ -1,0 +1,61 @@
+{
+  "gerado_em_utc": "2026-11-04T13:06:31+00:00",
+  "arquivo_origem": "data/raw/en.openfoodfacts.org.products.csv.gz",
+  "origem": {
+    "url": "https://static.openfoodfacts.org/data/en.openfoodfacts.org.products.csv.gz",
+    "path": "data/raw/en.openfoodfacts.org.products.csv.gz",
+    "last_modified": "Wed, 04 Nov 2026 09:04:05 GMT",
+    "bytes": 1528045350,
+    "downloaded": true
+  },
+  "marcas": [
+    "Adria",
+    "Bauducco"
+  ],
+  "pais": "en:brazil",
+  "coluna_de_imagem": "image_url",
+  "funil": {
+    "linhas_lidas": 4893434,
+    "brasil": 37878,
+    "brasil_e_marca": 278,
+    "brasil_marca_biscoito": 115,
+    "apos_remover_duplicados": 115
+  },
+  "so_categoria": 5,
+  "so_nome": 62,
+  "com_imagem": 105,
+  "colunas_opcionais_ausentes_no_arquivo": [
+    "fruits-vegetables-legumes-estimate-from-ingredients_100g"
+  ],
+  "marcas_quase_iguais_deixadas_de_fora": {
+    "xx:adria plus life": 1,
+    "xx:casa-bauducco": 1,
+    "xx:adrial": 1
+  },
+  "fracao_de_codigos_validos": 1.0,
+  "faltantes_por_coluna": {
+    "nutriments_energy_kcal_100g": 13,
+    "nutriments_energy_kj_100g": 13,
+    "nutriments_carbohydrates_100g": 14,
+    "nutriments_sugars_100g": 74,
+    "nutriments_added_sugars_100g": 79,
+    "nutriments_fat_100g": 13,
+    "nutriments_saturated_fat_100g": 64,
+    "nutriments_fiber_100g": 67,
+    "nutriments_proteins_100g": 14,
+    "nutriments_salt_100g": 66,
+    "nutriments_sodium_100g": 66,
+    "off_nutriscore_score": 88,
+    "off_nutriscore_grade": 0,
+    "nutriments_fruits_vegetables_legumes_estimate_from_ingredients_100g": 115
+  },
+  "com_dados_para_nutriscore": 33,
+  "campos_que_mais_faltam_para_nutriscore": {
+    "saturated_fat": 64,
+    "energy_kj": 13,
+    "sugars": 74,
+    "salt": 66,
+    "fiber": 67,
+    "proteins": 14
+  }
+}
