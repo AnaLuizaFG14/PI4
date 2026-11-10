@@ -6,3 +6,4 @@ torch
 Pillow
 transformers
 openfoodfacts
+streamlit>=1.67,<2
