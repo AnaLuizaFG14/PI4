@@ -115,18 +115,19 @@ class ProductClassifier:
         self.embeddings = embeddings
         self.metadata = metadata
 
-    @torch.inference_mode()
     def predict(self, image_path: str | Path, top_k: int = 3) -> list[dict]:
+        with self._read_image(image_path) as image:
+            return self.predict_image(image=image, top_k=top_k)
+
+    @torch.inference_mode()
+    def predict_image(self, image: Image.Image, top_k: int = 3) -> list[dict]:
+        """Consulta uma imagem já aberta, sem gravar o upload no disco."""
         if self.embeddings is None or self.metadata is None:
             raise RuntimeError("Crie ou carregue a base antes de fazer uma predição.")
         if top_k < 1:
             raise ValueError("top_k deve ser pelo menos 1.")
 
-        image = self._read_image(image_path)
-        try:
-            query_embedding = self.encoder.encode([image])
-        finally:
-            image.close()
+        query_embedding = self.encoder.encode([image])
 
         similarities = (query_embedding @ self.embeddings.T).squeeze(0)
         values, indices = torch.topk(
